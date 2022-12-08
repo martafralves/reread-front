@@ -1,9 +1,9 @@
 import axios from 'axios'
-
-const API_URL = '/api/books/'
-const API_URL_PRO = '/api/books/user/'
-const API_URL_SEARCH = '/api/books/search?q='
-const API_URL_BOOK = '/api/books/search/'
+const SERVER_URL = process.env.REACT_APP_SERVER_URL
+const API_URL = `${SERVER_URL}/api/books/`
+const API_URL_PRO = `${SERVER_URL}/api/books/user/`
+const API_URL_SEARCH = `${SERVER_URL}/api/books/search?q=`
+const API_URL_BOOK = `${SERVER_URL}/api/books/search/`
 
 
 //create new book
