@@ -1,6 +1,6 @@
 import axios from "axios";
-
-const API_URL = '/api/users/'
+const SERVER_URL = process.env.REACT_APP_SERVER_URL
+const API_URL = `${SERVER_URL}+'/api/users/'`
 
 //Register user
 const registerUser = async(userData) => {
@@ -38,7 +38,7 @@ const updateUser = async(userId, token, updatedUser) => {
     }
 
     const response = await axios.put(API_URL + userId, config, updatedUser)
-    
+
     return response.data
 }
 
